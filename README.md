@@ -72,3 +72,12 @@ Now we have an admin account (u/p: admin@example.com/password) It doesn't have a
 ### Step #8: Add cancan gem
 
 Edit the `Gemfile`, and run the (boring) `bundle install`
+
+
+### Step #9: Limit access to RailsAdmin to admin users
+
+Generate a CanCan ability with
+
+    rails g cancan:ability
+
+Edit the appropiate files and voila! Only admin users can access RailsAdmin!
