@@ -126,3 +126,8 @@ Since our app is kinda ugly, we add Bootstrap to the mix. Edit the `Gemfile` and
 
     bundle install
     rails g bootstrap:install
+
+
+### Step #15: Format HTML for Bootstrap
+
+It's a bit better, but not that much without modifying the HTMLs to match Bootstrap's requirements. Let's just do that.
