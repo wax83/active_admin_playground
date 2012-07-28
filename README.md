@@ -33,3 +33,17 @@ Views need a little help. Especially that ugly `posts#index`. *(Generating `for`
 ### Step #5: Add `devise` & `rails_admin` gems
 
 And run our old friend: `bundle install`
+
+
+### Step #6: Generate RailsAdmin
+
+Run:
+
+    rails g rails_admin:install
+
+Defaults are fine. Just press return twice.  
+Since this creates a new `User` model, we need to run the migration in order to use RailsAdmin
+
+    rake db:migrate
+
+Now you're good to go: access the admin interface under **/admin**, eg. [http://localhost:3000/admin](http://localhost:3000/admin)
