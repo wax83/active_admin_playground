@@ -81,3 +81,9 @@ Generate a CanCan ability with
     rails g cancan:ability
 
 Edit the appropiate files and voila! Only admin users can access RailsAdmin!
+
+
+### Step #10: User account links
+
+To prepare authorization for our Post model, first add a login/register feature. This only requires view editing, since everything else is graciously provided by Devise.  
+We also put a link to RailsAdmin for admin users to avoid typing the URL every time.
