@@ -110,3 +110,11 @@ Add the column, then:
     rake db:migrate
 
 We also need to edit the `PostsController`, the 2 models and the views to get a properly functioning feature.
+
+
+### Step #13: Users can only manage their own posts
+
+Now we have all the associations set up, but we also need to ensure that users won't delete each other's posts. Admins should still do whatever the hell they want.
+
+Doing this is a joke: just check our `Ability` class, and be amazed :)  
+It's also a good idea to check permissions to hide unneeded links.
