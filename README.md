@@ -23,3 +23,8 @@ Remove the static index file
     rm public/index.html
 
 *Also remove `public/stylesheets`. Nifty generators are getting old... :)*
+
+
+### Step #3: Reformat posts HTML
+
+Views need a little help. Especially that ugly `posts#index`. *(Generating `for` instead of `each` by default? Are you kidding me?)*

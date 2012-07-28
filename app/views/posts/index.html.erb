@@ -1,19 +1,14 @@
 <% title "Posts" %>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-  </tr>
-  <% for post in @posts %>
-    <tr>
-      <td><%= post.title %></td>
-      <td><%= post.body %></td>
-      <td><%= link_to "Show", post %></td>
-      <td><%= link_to "Edit", edit_post_path(post) %></td>
-      <td><%= link_to "Destroy", post, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
-
 <p><%= link_to "New Post", new_post_path %></p>
+
+<% @posts.each do |post| %>
+  <div class="post">
+    <h3><%= link_to post.title, post %></h3>
+    <div><%= post.body %></div>
+    <div class="actions">
+      <%= link_to "Edit", edit_post_path(post) %> |
+      <%= link_to "Destroy", post, :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+  </div>
+<% end %>
