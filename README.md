@@ -147,3 +147,23 @@ That's it for now, we'll start customizing it in the next step.
 ### Step #17: Customizing forms for Bootstrap with SimpleForm
 
 First, we need to have a decent SimpleForm config in `config/initializers/simple_form.rb`. After it's done, making our post form a better Bootstrap-citizen is snap.
+
+
+---
+
+## Final words
+
+Making a simple blogger application with such tools is a joy and can be done lightning fast. Hope you enjoned it! :)
+
+#### Excersize
+
+If you feel adventurous, consider addig a commenting feature with the following constraints:
+
+* Comments belong to posts
+* A comment has an author. If it's a registered user, then it should be his username for convenience
+* This means the users will need to have usernames
+* Anyone can create comments
+* Only registered users can delete comments, and only the ones that belong to his own posts
+* Even a registered user can't edit comments
+* Admin users are still divine entities
+* And finally: we didn't do any validations, so do it pronto! :)
