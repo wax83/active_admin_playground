@@ -1,14 +1,18 @@
 <% title "Posts" %>
 
-<p><%= link_to "New Post", new_post_path %></p>
+<p><%= link_to "New Post", new_post_path if user_signed_in? %></p>
 
 <% @posts.each do |post| %>
   <div class="post">
     <h3><%= link_to post.title, post %></h3>
     <div><%= post.body %></div>
-    <div class="actions">
-      <%= link_to "Edit", edit_post_path(post) %> |
-      <%= link_to "Destroy", post, :confirm => 'Are you sure?', :method => :delete %>
-    </div>
+
+    <% if user_signed_in? %>
+      <div class="actions">
+        <%= link_to "Edit", edit_post_path(post) %> |
+        <%= link_to "Destroy", post, :confirm => 'Are you sure?', :method => :delete %>
+      </div>
+    <% end %>
+
   </div>
 <% end %>

@@ -25,9 +25,16 @@ class Ability
   # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities
 
   def initialize(user)
-    if user && user.admin?
-      can :access, :rails_admin
-      can :dashboard
+    can :read, :all # allow everyone to read everything
+
+    if user
+      can :manage, Post
+
+      if user.admin?
+        can :access, :rails_admin
+        can :dashboard
+        can :manage, :all
+      end
     end
   end
 end

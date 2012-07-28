@@ -87,3 +87,12 @@ Edit the appropiate files and voila! Only admin users can access RailsAdmin!
 
 To prepare authorization for our Post model, first add a login/register feature. This only requires view editing, since everything else is graciously provided by Devise.  
 We also put a link to RailsAdmin for admin users to avoid typing the URL every time.
+
+
+### Step #11: Allow only registered users to manage posts
+
+This feature mostly relies on editing the `app/models/ability.rb` to define the rules, but we also need to tell `PostsController` to gain access to the (`@post`) resource to handle authorization.
+
+It's also a nice addition to handle `CanCan::AccessDenied` errors application-wide by redirecting the users to the root URL and display a heart-warming message there, instead of throwing them an ugly error. This is done in the `ApplicationController`.
+
+And if we're already this thoughtful, why not hide all the links that can't be accessed anyway?
