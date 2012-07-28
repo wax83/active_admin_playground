@@ -47,3 +47,14 @@ Since this creates a new `User` model, we need to run the migration in order to 
     rake db:migrate
 
 Now you're good to go: access the admin interface under **/admin**, eg. [http://localhost:3000/admin](http://localhost:3000/admin)
+
+
+### Step #7: Add admin attribute to users
+
+Since we need to distinguish between a regular and an admin user, have to have a flag in the database.
+
+    rails g migration add_admin_to_users
+
+Edit the migration file, then:
+
+    rake db:migrate
