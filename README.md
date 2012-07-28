@@ -142,3 +142,8 @@ First, we add `simple_form` to our Gemfile, then just we just run a couple of co
     rails g simple_form:install
 
 That's it for now, we'll start customizing it in the next step.
+
+
+### Step #17: Customizing forms for Bootstrap with SimpleForm
+
+First, we need to have a decent SimpleForm config in `config/initializers/simple_form.rb`. After it's done, making our post form a better Bootstrap-citizen is snap.
