@@ -118,3 +118,11 @@ Now we have all the associations set up, but we also need to ensure that users w
 
 Doing this is a joke: just check our `Ability` class, and be amazed :)  
 It's also a good idea to check permissions to hide unneeded links.
+
+
+### Step #14: Add and generate Twitter Bootstrap (twitter-bootstrap-rails)
+
+Since our app is kinda ugly, we add Bootstrap to the mix. Edit the `Gemfile` and run:
+
+    bundle install
+    rails g bootstrap:install

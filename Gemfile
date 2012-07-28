@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'rails_admin'
 gem 'devise'
 gem 'cancan'
+gem 'twitter-bootstrap-rails'
 
 group :development do
   gem 'pry'
