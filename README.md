@@ -131,3 +131,14 @@ Since our app is kinda ugly, we add Bootstrap to the mix. Edit the `Gemfile` and
 ### Step #15: Format HTML for Bootstrap
 
 It's a bit better, but not that much without modifying the HTMLs to match Bootstrap's requirements. Let's just do that.
+
+
+### Step #16: Install SimpleForm
+
+We deliberately skipped the formatting of forms in the previous step: the reason for this is that SimpleForm -if properly configured- can play very well with Bootstrap.  
+First, we add `simple_form` to our Gemfile, then just we just run a couple of commands:
+
+    bundle install
+    rails g simple_form:install
+
+That's it for now, we'll start customizing it in the next step.

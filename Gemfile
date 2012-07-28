@@ -10,6 +10,7 @@ gem 'rails_admin'
 gem 'devise'
 gem 'cancan'
 gem 'twitter-bootstrap-rails'
+gem 'simple_form'
 
 group :development do
   gem 'pry'
