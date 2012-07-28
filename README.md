@@ -8,3 +8,18 @@
 ### Step #2: Add some useful development dependencies
 
 Then, of course, run `bundle install`
+
+
+### Step #3: Generate our Post model
+
+We do the scaffolding using a nifty-generator, and migrate the stuff right away.
+
+    rails g nifty:layout
+    rails g nifty:scaffold Post title:string body:text
+    rake db:migrate
+
+Remove the static index file
+
+    rm public/index.html
+
+*Also remove `public/stylesheets`. Nifty generators are getting old... :)*
