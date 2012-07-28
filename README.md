@@ -58,3 +58,12 @@ Since we need to distinguish between a regular and an admin user, have to have a
 Edit the migration file, then:
 
     rake db:migrate
+
+
+### Step #7: Add admin seed data
+
+Edit `db/seeds.rb`, then:
+
+    rake db:seed
+
+Now we have an admin account (u/p: admin@example.com/password) It doesn't have any speacial features yet, though...
