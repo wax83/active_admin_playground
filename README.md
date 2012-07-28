@@ -96,3 +96,17 @@ This feature mostly relies on editing the `app/models/ability.rb` to define the 
 It's also a nice addition to handle `CanCan::AccessDenied` errors application-wide by redirecting the users to the root URL and display a heart-warming message there, instead of throwing them an ugly error. This is done in the `ApplicationController`.
 
 And if we're already this thoughtful, why not hide all the links that can't be accessed anyway?
+
+
+### Step #12: Associate posts with users
+
+It'd be great to indicate who created what. And, besides, it'll be the basis of one of the features we'll develop later, so let's set up that nasty `has_many`/`belongs_to` relationship between the `User` and the `Post` model.  
+Create a migration:
+
+    rails g migration associate_posts_with_users
+
+Add the column, then:
+
+    rake db:migrate
+
+We also need to edit the `PostsController`, the 2 models and the views to get a properly functioning feature.
