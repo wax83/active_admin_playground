@@ -67,3 +67,8 @@ Edit `db/seeds.rb`, then:
     rake db:seed
 
 Now we have an admin account (u/p: admin@example.com/password) It doesn't have any speacial features yet, though...
+
+
+### Step #8: Add cancan gem
+
+Edit the `Gemfile`, and run the (boring) `bundle install`

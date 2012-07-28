@@ -8,6 +8,7 @@ gem 'rails', '3.2.6'
 gem 'sqlite3'
 gem 'rails_admin'
 gem 'devise'
+gem 'cancan'
 
 group :development do
   gem 'pry'
