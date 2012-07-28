@@ -25,6 +25,11 @@ Remove the static index file
 *Also remove `public/stylesheets`. Nifty generators are getting old... :)*
 
 
-### Step #3: Reformat posts HTML
+### Step #4: Reformat posts HTML
 
 Views need a little help. Especially that ugly `posts#index`. *(Generating `for` instead of `each` by default? Are you kidding me?)*
+
+
+### Step #5: Add `devise` & `rails_admin` gems
+
+And run our old friend: `bundle install`
